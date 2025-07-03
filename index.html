@@ -1,108 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anirudh Bhargav | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #0f0f2d; color: #ffffff; font-family: 'Segoe UI', sans-serif; }
+    .btn { background: #6c63ff; color: white; padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; transition: all 0.3s ease; }
+    .btn:hover { background: #5848e5; }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-  <!-- Header -->
-  <header class="bg-white shadow-md py-6">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-      <h1 class="text-3xl font-bold">Anirudh Bhargav</h1>
-      <p class="text-gray-600">MSc in Applied Computer Science</p>
-    </div>
+<body class="min-h-screen">
+  <header class="flex items-center justify-between px-6 py-4 border-b border-gray-700">
+    <div class="text-2xl font-bold">Anirudh</div>
+    <nav class="space-x-6 text-gray-300">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#services" class="hover:text-white">Services</a>
+      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+    <a href="/resume.pdf" class="btn">Download CV</a>
   </header>
 
-  <!-- Hero Section -->
-  <section class="text-center py-12 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-    <h2 class="text-4xl font-bold mb-4">Full Stack Developer | Cloud Engineer | ServiceNow Automation</h2>
-    <p class="text-lg">Bringing ideas to life with scalable web applications and automation</p>
-    <div class="mt-4 space-x-4">
-      <a href="https://github.com/anirudh17d" class="underline">GitHub</a>
-      <a href="https://www.linkedin.com/in/anirudhdb/" class="underline">LinkedIn</a>
-      <a href="mailto:anirudhdb@gmail.com" class="underline">Email Me</a>
+  <section class="text-center py-12 px-4 relative">
+    <img src="profile.jpeg" alt="Profile Photo" class="mx-auto w-40 h-40 rounded-full shadow-lg border-4 border-purple-500">
+    <h1 class="text-4xl md:text-5xl font-bold mt-6">Hello I'm Anirudh Bhargav</h1>
+    <p class="text-purple-300 text-lg mt-2">Full Stack Developer & ServiceNow Automation Engineer</p>
+    <p class="mt-4 text-gray-400">Heidelberg, Germany</p>
+    <div class="mt-4 flex justify-center space-x-4">
+      <a href="mailto:anirudhdb@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://github.com/anirudh17d" class="btn"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/anirudhdb" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </div>
   </section>
 
-  <!-- About -->
-  <section class="py-12 container mx-auto px-4">
-    <h3 class="text-2xl font-semibold mb-4">About Me</h3>
-    <p>
-      I am a Master's student in Applied Computer Science (SRH Hochschule Heidelberg), specializing in Software Architecture, Cloud Computing, and IT Security. I have 2+ years of experience as a full-stack developer, and I currently work at SAP as a Service Automation Developer.
-    </p>
-  </section>
-
-  <!-- Experience -->
-  <section class="py-12 bg-white container mx-auto px-4">
-    <h3 class="text-2xl font-semibold mb-4">Experience</h3>
-    <div>
-      <h4 class="font-bold">SAP SE, Walldorf – Service Automation Developer</h4>
-      <p class="text-sm text-gray-600">Nov 2024 – Present</p>
-      <ul class="list-disc ml-6">
-        <li>Built ServiceNow forms and automated workflows for GTLC compliance</li>
-        <li>Implemented dashboards with time-based analytics</li>
-        <li>Collaborated with global SAP teams to enhance internal platforms</li>
-      </ul>
-    </div>
-    <div class="mt-6">
-      <h4 class="font-bold">Exathought Technologies – Full Stack Developer</h4>
-      <p class="text-sm text-gray-600">Nov 2022 – Nov 2023</p>
-      <ul class="list-disc ml-6">
-        <li>Developed full-stack web apps with React, Node, MongoDB</li>
-        <li>Worked on eSignature app, GALE Loyalty Platform, TVS Accelerator</li>
-        <li>Integrated SSO, chatbots, and third-party APIs</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="py-12 container mx-auto px-4">
-    <h3 class="text-2xl font-semibold mb-4">Projects</h3>
-    <div class="grid md:grid-cols-2 gap-4">
-      <div class="bg-white p-4 rounded shadow">
-        <h4 class="font-bold">Thumbnail Generator (GCP)</h4>
-        <p>Compared GAE vs GKE with a cloud-native web app using Docker and Kubernetes</p>
-        <a href="https://github.com/anirudh17d/GKE-vs-GAE---Thumbnail-Generator" class="text-blue-600">GitHub Repo</a>
+  <section id="projects" class="py-16 px-6">
+    <h2 class="text-3xl font-semibold mb-10 text-center">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded shadow">
+        <h3 class="font-bold text-xl">Thumbnail Generator on GCP</h3>
+        <p class="text-sm mt-2">GAE vs GKE comparison with containerized app deployment</p>
+        <a href="https://github.com/anirudh17d/GKE-vs-GAE---Thumbnail-Generator" class="btn mt-3 inline-block">View Code</a>
       </div>
-      <div class="bg-white p-4 rounded shadow">
-        <h4 class="font-bold">Flight Data App</h4>
-        <p>Full-stack microservice app with Leaflet.js map UI and geospatial queries</p>
-        <a href="https://github.com/anirudh17d/Flight-Club-Air-Route-Navigator" class="text-blue-600">GitHub Repo</a>
-      </div>
-      <div class="bg-white p-4 rounded shadow">
-        <h4 class="font-bold">HR Management System</h4>
-        <p>Java + Spring Boot + React full-stack web app for employee records</p>
-        <a href="https://github.com/Nikhil-Shawn/human-resource-management-system" class="text-blue-600">GitHub Repo</a>
-      </div>
-      <div class="bg-white p-4 rounded shadow">
-        <h4 class="font-bold">Talentra Platform</h4>
-        <p>Microservice architecture web app for job recruitment</p>
-        <a href="https://github.com/Study-Program-Applied-Computer-Science/SAD-talentra-recruitment-platform" class="text-blue-600">GitHub Repo</a>
+      <div class="bg-gray-800 p-6 rounded shadow">
+        <h3 class="font-bold text-xl">Flight Data WebApp</h3>
+        <p class="text-sm mt-2">React + Leaflet map + MongoDB + Redis</p>
+        <a href="https://github.com/anirudh17d/Flight-Club-Air-Route-Navigator" class="btn mt-3 inline-block">View Code</a>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section class="py-12 bg-white container mx-auto px-4">
-    <h3 class="text-2xl font-semibold mb-4">Skills</h3>
-    <div class="flex flex-wrap gap-3">
-      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">JavaScript</span>
-      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">React</span>
-      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Node.js</span>
-      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">MongoDB</span>
-      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Docker</span>
-      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">GCP (GAE/GKE)</span>
-      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">ServiceNow</span>
-      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Java</span>
-      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Spring Boot</span>
+  <section id="services" class="bg-gray-900 py-16 px-6">
+    <h2 class="text-3xl font-semibold mb-10 text-center">My Expertise</h2>
+    <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded text-center">
+        <p class="text-4xl font-bold text-purple-400">90%</p>
+        <p class="mt-2">Frontend Development</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded text-center">
+        <p class="text-4xl font-bold text-purple-400">85%</p>
+        <p class="mt-2">Backend APIs</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded text-center">
+        <p class="text-4xl font-bold text-purple-400">70%</p>
+        <p class="mt-2">Cloud & DevOps</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded text-center">
+        <p class="text-4xl font-bold text-purple-400">75%</p>
+        <p class="mt-2">Automation (ServiceNow)</p>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-200 text-center py-6">
-    <p>&copy; 2025 Anirudh Bhargav. Made with 💙 in Heidelberg.</p>
+  <section id="about" class="py-20 px-6 bg-gradient-to-br from-purple-800 to-indigo-900">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-extrabold text-white mb-6">Who is Anirudh?</h2>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">
+        I'm a passionate software engineer building full-stack apps and automating business workflows with ServiceNow. I'm currently working at SAP and pursuing my Master's in Germany, bringing a global mindset to every line of code I write.
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-8 text-left text-sm text-white">
+        <div class="space-y-2">
+          <p><strong>🎓 Education:</strong> MSc in Applied CS, SRH Heidelberg</p>
+          <p><strong>🧠 Interests:</strong> Cloud, DevOps, AI, Web Automation</p>
+        </div>
+        <div class="space-y-2">
+          <p><strong>📍 Location:</strong> Heidelberg, Germany</p>
+          <p><strong>📬 Email:</strong> anirudhdb@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black text-center text-sm py-6 text-gray-400">
+    &copy; 2025 Anirudh Bhargav. All rights reserved.
   </footer>
 </body>
 </html>
