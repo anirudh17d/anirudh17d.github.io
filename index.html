@@ -14,6 +14,19 @@
     .btn { background: #6c63ff; color: white; padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; transition: all 0.3s ease; }
     .btn:hover { background: #5848e5; }
   </style>
+<script>
+  // Smooth scrolling for all internal anchor links
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+</script>
 </head>
 <body class="min-h-screen">
   <header class="flex flex-wrap items-center justify-between px-6 py-4 border-b border-gray-700">
@@ -25,7 +38,7 @@
       <a href="#projects" class="hover:text-white">Projects</a>
       <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
-    <a href="resume.pdf" class="btn inline-block">Download CV</a>
+    <a href="resume.pdf" target="_blank" class="btn inline-block">Download CV</a>
   </div>
 </header>
 
@@ -44,50 +57,58 @@
   <section id="projects" class="py-16 px-6">
     <h2 class="text-3xl font-semibold mb-10 text-center">Projects</h2>
     <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-      <div class="bg-gray-800 p-6 rounded shadow">
-        <h3 class="font-bold text-xl">Thumbnail Generator on GCP</h3>
-        <p class="text-sm mt-2">GAE vs GKE comparison with containerized app deployment</p>
-        <a href="https://github.com/anirudh17d/GKE-vs-GAE---Thumbnail-Generator" class="btn mt-3 inline-block">View Code</a>
-      </div>
-      <div class="bg-gray-800 p-6 rounded shadow">
-        <h3 class="font-bold text-xl">Flight Data WebApp</h3>
-        <p class="text-sm mt-2">React + Node.js + MongoDB + Redis</p>
-        <a href="https://github.com/anirudh17d/Flight-Club-Air-Route-Navigator" class="btn mt-3 inline-block">View Code</a>
-      </div>
-      <div class="bg-gray-800 p-6 rounded shadow">
-        <h3 class="font-bold text-xl">Talentra WebApp</h3>
-        <p class="text-sm mt-2">Scalabale Job Recruitement Platform built in Microservice Architecture</p>
-        <a href="https://github.com/Study-Program-Applied-Computer-Science/SAD-talentra-recruitment-platform" class="btn mt-3 inline-block">View Code</a>
-      </div>
-      <div class="bg-gray-800 p-6 rounded shadow">
-        <h3 class="font-bold text-xl">Human Resource Management System</h3>
-        <p class="text-sm mt-2">MERN Stack Web App</p>
-        <a href="https://github.com/Nikhil-Shawn/human-resource-management-system" class="btn mt-3 inline-block">View Code</a>
-      </div>
-    </div>
-  </section>
+  <div class="bg-gray-800 p-6 rounded shadow">
+    <h3 class="font-bold text-xl">Thumbnail Generator on GCP</h3>
+    <p class="text-sm mt-2">GAE vs GKE comparison with containerized app deployment</p>
+    <a href="https://github.com/anirudh17d/GKE-vs-GAE---Thumbnail-Generator" class="btn mt-3 inline-block">View Code</a>
+  </div>
+  <div class="bg-gray-800 p-6 rounded shadow">
+    <h3 class="font-bold text-xl">Flight Data WebApp</h3>
+    <p class="text-sm mt-2">React + Leaflet map + MongoDB + Redis</p>
+    <a href="https://github.com/anirudh17d/Flight-Club-Air-Route-Navigator" class="btn mt-3 inline-block">View Code</a>
+  </div>
+  <div class="bg-gray-800 p-6 rounded shadow">
+    <h3 class="font-bold text-xl">Talentra WebApp</h3>
+    <p class="text-sm mt-2">Scalable Job Recruitment Platform built in Microservice Architecture</p>
+    <a href="https://github.com/Study-Program-Applied-Computer-Science/SAD-talentra-recruitment-platform" class="btn mt-3 inline-block">View Code</a>
+  </div>
+  <div class="bg-gray-800 p-6 rounded shadow">
+    <h3 class="font-bold text-xl">Human Resource Management System</h3>
+    <p class="text-sm mt-2">MERN Stack Web App</p>
+    <a href="https://github.com/Nikhil-Shawn/human-resource-management-system" class="btn mt-3 inline-block">View Code</a>
+  </div>
+</div>
+</section>
 
   <section id="services" class="bg-gray-900 py-16 px-6">
-    <h2 class="text-3xl font-semibold mb-10 text-center">My Expertise</h2>
-    <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-      <div class="bg-gray-800 p-6 rounded text-center">
-        <p class="text-4xl font-bold text-purple-400">90%</p>
-        <p class="mt-2">Frontend Development</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded text-center">
-        <p class="text-4xl font-bold text-purple-400">85%</p>
-        <p class="mt-2">Backend APIs</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded text-center">
-        <p class="text-4xl font-bold text-purple-400">70%</p>
-        <p class="mt-2">Cloud & DevOps</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded text-center">
-        <p class="text-4xl font-bold text-purple-400">75%</p>
-        <p class="mt-2">Automation (ServiceNow)</p>
+  <h2 class="text-3xl font-semibold mb-10 text-center">My Expertise</h2>
+  <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-purple-300">Frontend Development</h3>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div class="bg-purple-500 h-4 rounded-full" style="width: 90%"></div>
       </div>
     </div>
-  </section>
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-purple-300">Backend APIs</h3>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div class="bg-purple-500 h-4 rounded-full" style="width: 85%"></div>
+      </div>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-purple-300">Cloud & DevOps</h3>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div class="bg-purple-500 h-4 rounded-full" style="width: 70%"></div>
+      </div>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-purple-300">Automation (ServiceNow)</h3>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div class="bg-purple-500 h-4 rounded-full" style="width: 75%"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section id="about" class="py-20 px-6 bg-gradient-to-br from-purple-800 to-indigo-900">
     <div class="max-w-5xl mx-auto text-center">
@@ -98,7 +119,7 @@
       <div class="flex flex-col md:flex-row justify-center gap-8 text-left text-sm text-white">
         <div class="space-y-2">
           <p><strong>🎓 Education:</strong> MSc in Applied CS, SRH Heidelberg</p>
-          <p><strong>🧠 Interests:</strong> Cloud, DevOps, AI, Web Automation</p>
+          <p><strong>🧠 Interests:</strong> Cloud, DevOps, AI & ML, Web Automation</p>
         </div>
         <div class="space-y-2">
           <p><strong>📍 Location:</strong> Heidelberg, Germany</p>
@@ -111,5 +132,30 @@
   <footer class="bg-black text-center text-sm py-6 text-gray-400">
     Made with love from Heidelberg 💙
   </footer>
+<div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden z-50 flex justify-end items-center">
+  <div class="bg-gray-800 p-8 rounded-lg w-11/12 max-w-md text-center relative">
+    <button onclick="document.getElementById('contact-modal').classList.add('hidden')" class="absolute top-2 right-4 text-white text-2xl">&times;</button>
+    <h2 class="text-2xl font-bold mb-4">Let's Connect!</h2>
+    <p class="mb-4 text-gray-300">Feel free to reach out via email or connect on LinkedIn or GitHub.</p>
+    <div class="space-y-2">
+  <a href="mailto:anirudhdb@gmail.com" class="block btn">📧 anirudhdb@gmail.com</a>
+  <a href="mailto:anirudh.bhargav@sap.com" class="block btn">📨 anirudh.bhargav@sap.com</a>
+  <a href="tel:+4915560080837" class="block btn">📞 +49 1556 0080837</a>
+  <a href="https://github.com/anirudh17d" target="_blank" class="block btn">🐱 GitHub</a>
+  <a href="https://linkedin.com/in/anirudhdb" target="_blank" class="block btn">💼 LinkedIn</a>
+</div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href="#contact"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementById('contact-modal').classList.remove('hidden');
+      });
+    });
+  });
+</script>
 </body>
 </html>
