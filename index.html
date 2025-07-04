@@ -27,6 +27,19 @@
     });
   });
 </script>
+<script>
+  // Smooth scrolling for all internal anchor links
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+</script>
 </head>
 <body class="min-h-screen">
   <header class="flex flex-wrap items-center justify-between px-6 py-4 border-b border-gray-700">
@@ -38,6 +51,7 @@
       <a href="#projects" class="hover:text-white">Projects</a>
       <a href="#contact" class="hover:text-white">Contact</a>
     </nav>
+    <a href="resume.pdf" target="_blank" class="btn inline-block">Download CV</a>
     <a href="resume.pdf" target="_blank" class="btn inline-block">Download CV</a>
   </div>
 </header>
@@ -87,7 +101,18 @@
       <h3 class="text-xl font-semibold mb-4 text-purple-300">Frontend Development</h3>
       <div class="w-full bg-gray-700 rounded-full h-4">
         <div class="bg-purple-500 h-4 rounded-full" style="width: 90%"></div>
+  <h2 class="text-3xl font-semibold mb-10 text-center">My Expertise</h2>
+  <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-purple-300">Frontend Development</h3>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div class="bg-purple-500 h-4 rounded-full" style="width: 90%"></div>
       </div>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-purple-300">Backend APIs</h3>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div class="bg-purple-500 h-4 rounded-full" style="width: 85%"></div>
     </div>
     <div>
       <h3 class="text-xl font-semibold mb-4 text-purple-300">Backend APIs</h3>
@@ -99,7 +124,21 @@
       <h3 class="text-xl font-semibold mb-4 text-purple-300">Cloud & DevOps</h3>
       <div class="w-full bg-gray-700 rounded-full h-4">
         <div class="bg-purple-500 h-4 rounded-full" style="width: 70%"></div>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-purple-300">Cloud & DevOps</h3>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div class="bg-purple-500 h-4 rounded-full" style="width: 70%"></div>
       </div>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-purple-300">Automation (ServiceNow)</h3>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div class="bg-purple-500 h-4 rounded-full" style="width: 75%"></div>
+      </div>
+    </div>
+  </div>
+</section>
     </div>
     <div>
       <h3 class="text-xl font-semibold mb-4 text-purple-300">Automation (ServiceNow)</h3>
